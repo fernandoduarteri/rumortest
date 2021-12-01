@@ -13,7 +13,7 @@ const Search:FC = () => {
     
 useEffect(() => {
     const getData = async()=>{
-        let result = await fetch('http://localhost:5000/api/search',{
+        let result = await fetch('https://rumor-test.herokuapp.com/api/search',{
             method: 'POST',
             body: JSON.stringify( {
                 "key":search,
@@ -32,7 +32,7 @@ useEffect(() => {
 }, [maxPages])
 
 const handleClick = async ()=>{
-    let result = await fetch('http://localhost:5000/api/search',{
+    let result = await fetch('https://rumor-test.herokuapp.com/api/search',{
         method: 'POST',
         body: JSON.stringify( {
             "key":search,
